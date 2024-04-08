@@ -1,0 +1,28 @@
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+html {
+  background-color: $low-emphasis-colour;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+}
+
+ul,
+li {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

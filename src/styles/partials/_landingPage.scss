@@ -1,0 +1,63 @@
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 32px;
+
+  //Navigation
+  nav {
+    height: 72px;
+  }
+
+  nav,
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  ul {
+    gap: 32px;
+  }
+
+  nav a {
+    padding: 16px 0px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    width: 712px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  .header-image-container {
+    position: relative;
+    height: 60%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      display: block;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: url("../../assets/badge.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+      filter: brightness(125%);
+    }
+  }
+}
