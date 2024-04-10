@@ -1,0 +1,29 @@
+form {
+  width: 700px;
+
+  .flex-container {
+    margin-bottom: 24px;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  label,
+  textarea {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input,
+  textarea {
+    border: 1px solid $accent-colour;
+    padding: 16px 32px;
+    width: 100%;
+  }
+
+  textarea {
+    margin-bottom: 32px;
+    resize: none;
+  }
+}

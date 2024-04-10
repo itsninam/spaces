@@ -1,0 +1,21 @@
+//Navigation
+nav {
+  height: 72px;
+}
+
+nav,
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+ul {
+  gap: 32px;
+}
+
+nav a {
+  padding: 16px 0px;
+  text-transform: uppercase;
+}
