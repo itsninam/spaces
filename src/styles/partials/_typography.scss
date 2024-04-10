@@ -6,11 +6,19 @@ html {
   font-size: 62.5%;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px;
+}
+
 body {
   font-size: 1.8rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   color: $high-emphasis-colour;
+  letter-spacing: 1.5px;
 }
 
 h1,
@@ -29,7 +37,22 @@ a {
 
 h1 {
   font-size: 4.2rem;
-  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 3.2rem;
+  position: relative;
+  margin-bottom: 56px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 60px;
+    background-color: $accent-colour;
+    left: 0px;
+    bottom: -12px;
+  }
 }
 
 h3,
@@ -45,7 +68,6 @@ a {
 
 nav a {
   font-size: 2.8rem;
-  letter-spacing: 1.5px;
 }
 
 nav li a {
@@ -54,4 +76,8 @@ nav li a {
 
 h4 {
   font-size: 2rem;
+}
+
+p {
+  margin-bottom: 40px;
 }

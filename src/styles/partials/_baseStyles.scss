@@ -1,17 +1,12 @@
 .wrapper {
   width: 80%;
   margin: 0 auto;
+  max-width: 1920px;
 }
 
 html {
   background-color: $low-emphasis-colour;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  margin: 0px;
+  scroll-behavior: smooth;
 }
 
 ul,
@@ -25,4 +20,33 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+section {
+  padding: 64px 0px;
+}
+
+button {
+  border: 1px solid transparent;
+  padding: 16px 32px;
+  background-color: $accent-colour;
+  color: $low-emphasis-colour;
+  font-weight: $font-weight-semi-bold;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    border: 1px solid $accent-colour;
+    background-color: $low-emphasis-colour;
+    color: $accent-colour;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  height: 100%;
 }

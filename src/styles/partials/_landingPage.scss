@@ -1,13 +1,4 @@
 header {
-  min-height: 100vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  justify-content: space-between;
-  padding-bottom: 32px;
-  overflow: scroll;
-
   //Navigation
   nav {
     height: 72px;
@@ -32,14 +23,14 @@ header {
 
   h1 {
     width: 712px;
-    margin: 0 auto;
+    margin: 64px auto;
     text-align: center;
     line-height: 50px;
   }
 
   .header-image-container {
     position: relative;
-    height: 56vh;
+    height: 420px;
 
     &::after {
       content: "";
