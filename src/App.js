@@ -7,6 +7,7 @@ import Main from "./components/Main";
 //Pages
 import LandingPage from "./pages/LandingPage";
 import About from "./pages/About";
+import Spotlight from "./pages/Spotlight";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <LandingPage />
       <Main>
         <About />
+        <Spotlight />
       </Main>
     </Wrapper>
   );

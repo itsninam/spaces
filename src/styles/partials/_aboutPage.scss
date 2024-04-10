@@ -1,24 +1,22 @@
 .about {
-  .about-content {
-    width: 35%;
+  .content-container {
     margin-top: 64px;
   }
 
   .about-image-container {
-    width: 35%;
+    width: 45%;
     position: relative;
-    height: 50rem;
 
     img {
+      height: 480px;
+      margin-left: auto;
       object-fit: cover;
-      object-position: bottom center;
-      width: 400px;
     }
 
     img:nth-of-type(2) {
       position: absolute;
-      top: 35%;
-      left: -50%;
+      top: 25%;
+      left: 5%;
     }
   }
 }

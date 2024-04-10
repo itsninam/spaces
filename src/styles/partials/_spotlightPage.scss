@@ -1,0 +1,30 @@
+.spotlight {
+  padding-top: calc(64px + 32px);
+
+  .flex-container {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .image-label-container {
+    position: relative;
+    height: 430px;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    span {
+      background-color: $low-emphasis-colour;
+      padding: 12px 24px;
+      position: absolute;
+      bottom: 16px;
+      right: 0px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+  }
+}

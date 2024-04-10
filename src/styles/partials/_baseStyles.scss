@@ -1,7 +1,7 @@
 .wrapper {
   width: 80%;
+  max-width: 1240px;
   margin: 0 auto;
-  max-width: 1920px;
 }
 
 html {
@@ -47,6 +47,10 @@ button {
 .flex-container {
   display: flex;
   justify-content: space-between;
-  gap: 64px;
   height: 100%;
+  gap: 24px;
+}
+
+.content-container {
+  width: 45%;
 }
