@@ -1,8 +1,12 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useRef } from "react";
 
 const FormContext = createContext();
 
 function FormProvider({ children }) {
+  const navigationRef = useRef(null);
+
+  const [isVisible, setIsVisible] = useState(false);
+
   const [userInput, setUserInput] = useState({
     firstName: "",
     email: "",
@@ -29,12 +33,13 @@ function FormProvider({ children }) {
     }
 
     if (userInput.firstName && userInput.email && userInput.message) {
-      console.log(userInput, "form submit");
       setUserInput({
         firstName: "",
         email: "",
         message: "",
       });
+
+      setIsVisible(true);
     }
   };
 
@@ -64,6 +69,9 @@ function FormProvider({ children }) {
         messageError,
         handleChange,
         handleSubmit,
+        isVisible,
+        setIsVisible,
+        navigationRef,
       }}
     >
       {children}

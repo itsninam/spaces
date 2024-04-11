@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import Button from "../components/Button";
 import Paragraph from "../components/Paragraph";
 import FlexContainer from "../components/FlexContainer";
 import ContentContainer from "../components/ContentContainer";
@@ -20,7 +20,9 @@ function About() {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum"
           />
-          <Button text="Send message"></Button>
+          <Link to="contact" className="btn">
+            Send message
+          </Link>
         </ContentContainer>
         <div className="about-image-container">
           <img
