@@ -2,7 +2,8 @@ form {
   width: 700px;
 
   .flex-container {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    height: 100px;
 
     div {
       flex: 1;
@@ -22,8 +23,27 @@ form {
     width: 100%;
   }
 
-  textarea {
-    margin-bottom: 32px;
-    resize: none;
+  label.error-colour {
+    color: $error-colour;
+  }
+
+  input.error-colour,
+  textarea.error-colour {
+    border: 1px solid $error-colour;
+  }
+
+  .text-area-container {
+    height: 230px;
+  }
+
+  span {
+    display: block;
+    margin-top: 4px;
+    font-size: 1.2rem;
+    color: $error-colour;
+  }
+
+  button {
+    margin-top: 24px;
   }
 }

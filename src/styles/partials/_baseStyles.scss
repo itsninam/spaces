@@ -54,3 +54,12 @@ button {
 .content-container {
   width: 45%;
 }
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}

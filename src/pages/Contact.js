@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ContentContainer from "../components/ContentContainer";
 import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
@@ -7,8 +7,18 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import TextArea from "../components/TextArea";
 import FlexContainer from "../components/FlexContainer";
+import { useForm } from "../contexts/FormContext";
 
 function Contact() {
+  const {
+    userInput,
+    nameError,
+    emailError,
+    messageError,
+    handleChange,
+    handleSubmit,
+  } = useForm();
+
   return (
     <section>
       <ContentContainer>
@@ -18,18 +28,47 @@ function Contact() {
         peace healer goddess sage charms."
         />
       </ContentContainer>
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <FlexContainer>
           <div>
-            <Input type="text" label="Name" htmlFor="name" />
+            <Input
+              type="text"
+              label="Name"
+              htmlFor="firstName"
+              name="firstName"
+              value={userInput.firstName}
+              onChange={handleChange}
+              className={nameError ? "error-colour" : ""}
+            />
+            <span>{nameError}</span>
           </div>
           <div>
-            <Input type="text" label="Email" htmlFor="email" />
+            <Input
+              type="email"
+              label="Email"
+              htmlFor="email"
+              name="email"
+              value={userInput.email}
+              onChange={handleChange}
+              className={emailError ? "error-colour" : ""}
+            />
+            <span>{emailError}</span>
           </div>
         </FlexContainer>
 
-        <TextArea label="Message" htmlFor="message" />
-        <Button text="Send Message" />
+        <div className="text-area-container">
+          <TextArea
+            label="Message"
+            htmlFor="message"
+            name="message"
+            value={userInput.message}
+            onChange={handleChange}
+            className={messageError ? "error-colour" : ""}
+          />
+          <span>{messageError}</span>
+        </div>
+
+        <Button text="Send Message" type="submit" />
       </Form>
     </section>
   );

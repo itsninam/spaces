@@ -1,0 +1,78 @@
+import React, { createContext, useContext, useState, useEffect } from "react";
+
+const FormContext = createContext();
+
+function FormProvider({ children }) {
+  const [userInput, setUserInput] = useState({
+    firstName: "",
+    email: "",
+    message: "",
+  });
+
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    if (!userInput.firstName) {
+      setNameError("Please enter your name");
+    }
+
+    if (!userInput.email) {
+      setEmailError("Please enter your email");
+    }
+
+    if (!userInput.message) {
+      setMessageError("Please enter a message");
+    }
+
+    if (userInput.firstName && userInput.email && userInput.message) {
+      console.log(userInput, "form submit");
+      setUserInput({
+        firstName: "",
+        email: "",
+        message: "",
+      });
+    }
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setUserInput({ ...userInput, [name]: value });
+
+    if (userInput.firstName) {
+      setNameError("");
+    }
+
+    if (userInput.email) {
+      setEmailError("");
+    }
+
+    if (userInput.message) {
+      setMessageError("");
+    }
+  };
+
+  return (
+    <FormContext.Provider
+      value={{
+        userInput,
+        nameError,
+        emailError,
+        messageError,
+        handleChange,
+        handleSubmit,
+      }}
+    >
+      {children}
+    </FormContext.Provider>
+  );
+}
+
+function useForm() {
+  const context = useContext(FormContext);
+  return context;
+}
+export { FormProvider, useForm };
