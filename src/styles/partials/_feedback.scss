@@ -1,0 +1,27 @@
+.feedback {
+  .container {
+    border-left: 3px solid $accent-colour;
+    padding-left: 40px;
+    padding-top: 24px;
+  }
+
+  img {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+
+  .flex-container {
+    align-items: center;
+    margin-top: 24px;
+    gap: 32px;
+  }
+
+  .name-container {
+    width: 250px;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+}

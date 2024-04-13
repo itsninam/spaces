@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Spotlight from "./pages/Spotlight";
 import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
+import Feedback from "./pages/Feedback";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               <Main>
                 <About />
                 <Spotlight />
+                <Feedback />
               </Main>
             </>
           }
