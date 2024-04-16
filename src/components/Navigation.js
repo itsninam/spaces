@@ -2,30 +2,33 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useForm } from "../contexts/FormContext";
+import menuItems from "../data/menuItems";
 
 function Navigation() {
-  const { navigationRef, isVisible, setIsVisible } = useForm();
+  const { navigationRef, isMobileMenuOpen, setIsMobileMenuOpen } = useForm();
   return (
     <nav ref={navigationRef}>
       <a href="/">Spaces</a>
 
-      <ul className={!isVisible ? "" : "mobile-menu"}>
-        <li onClick={() => setIsVisible(false)}>
-          <HashLink to="/#about">About</HashLink>
-        </li>
-        <li>
-          <a href="/">Services</a>
-        </li>
-        <li>
-          <a href="/">Projects</a>
-        </li>
-        <li>
-          <Link to="contact">Contact</Link>
-        </li>
+      <ul className={!isMobileMenuOpen ? "" : "mobile-menu"}>
+        {menuItems.map((menuItem) => {
+          return (
+            <li onClick={() => setIsMobileMenuOpen(false)}>
+              {menuItem.directLink && (
+                <HashLink to={menuItem.menuItemLink}>
+                  {menuItem.menuItemLabel}
+                </HashLink>
+              )}
+              {!menuItem.directLink && (
+                <Link to={menuItem.menuItemLink}>{menuItem.menuItemLabel}</Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
-      <button onClick={() => setIsVisible(!isVisible)}>
+      <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
         <span class="material-symbols-outlined">
-          {isVisible ? "close" : "menu"}
+          {isMobileMenuOpen ? "close" : "menu"}
         </span>
       </button>
     </nav>

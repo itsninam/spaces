@@ -7,7 +7,7 @@ import ContentContainer from "../components/ContentContainer";
 
 function Spotlight() {
   return (
-    <section className="spotlight">
+    <section id="spotlight" className="spotlight">
       <ContentContainer>
         <Header text="Spotlight" />
         <Paragraph

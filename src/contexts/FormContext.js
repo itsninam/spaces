@@ -6,6 +6,7 @@ function FormProvider({ children }) {
   const navigationRef = useRef(null);
 
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const [userInput, setUserInput] = useState({
     firstName: "",
@@ -72,6 +73,8 @@ function FormProvider({ children }) {
         isVisible,
         setIsVisible,
         navigationRef,
+        setIsMobileMenuOpen,
+        isMobileMenuOpen,
       }}
     >
       {children}
