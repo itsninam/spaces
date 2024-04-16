@@ -4,13 +4,13 @@ import { HashLink } from "react-router-hash-link";
 import { useForm } from "../contexts/FormContext";
 
 function Navigation() {
-  const { navigationRef } = useForm();
+  const { navigationRef, isVisible, setIsVisible } = useForm();
   return (
     <nav ref={navigationRef}>
       <a href="/">Spaces</a>
 
-      <ul>
-        <li>
+      <ul className={!isVisible ? "" : "mobile-menu"}>
+        <li onClick={() => setIsVisible(false)}>
           <HashLink to="/#about">About</HashLink>
         </li>
         <li>
@@ -23,6 +23,11 @@ function Navigation() {
           <Link to="contact">Contact</Link>
         </li>
       </ul>
+      <button onClick={() => setIsVisible(!isVisible)}>
+        <span class="material-symbols-outlined">
+          {isVisible ? "close" : "menu"}
+        </span>
+      </button>
     </nav>
   );
 }

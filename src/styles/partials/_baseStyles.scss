@@ -2,6 +2,7 @@
   width: 80%;
   max-width: 1240px;
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 html {
@@ -23,10 +24,16 @@ img {
 }
 
 section {
-  padding: 64px 0px;
+  padding: 32px 0px;
 }
 
-button,
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+}
+
 .btn {
   border: 1px solid transparent;
   padding: 16px 32px;
