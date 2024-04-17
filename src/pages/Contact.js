@@ -33,7 +33,7 @@ function Contact() {
     if (isVisible) {
       modalRef.current.style.height = `${sectionHeight + navigationHeight}px`;
     }
-  }, [isVisible]);
+  }, [isVisible, navigationRef]);
 
   return (
     <section ref={sectionRef} id="contact">
