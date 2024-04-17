@@ -1,6 +1,73 @@
-@media screen and (max-width: 624px) {
-  h1 {
-    font-size: 3.4rem;
+@media screen and (max-width: 1096px) {
+  //Base styles
+  .content-container {
+    width: 100%;
+  }
+
+  .flex-container:not(.feedback .flex-container) {
+    flex-direction: column;
+    justify-content: normal;
+  }
+
+  //About page
+  .about {
+    .content-container {
+      margin: 0px;
+    }
+
+    .about-image-container {
+      flex: unset;
+      width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  //Spotlight page
+  .spotlight {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .content-container {
+      width: 100%;
+    }
+
+    .image-label-container span {
+      width: 100%;
+      bottom: -1px;
+      padding: 16px;
+    }
+  }
+
+  //Feedback page
+  .feedback {
+    .name-container {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+
+    img:nth-of-type(2) {
+      align-self: flex-end;
+      margin-left: -100px;
+      position: relative;
+      top: 64px;
+    }
+  }
+
+  //Contact page {
+  form {
+    width: 100%;
+
+    .flex-container,
+    .text-area-container {
+      height: 100%;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -52,78 +119,19 @@
   }
 }
 
-@media screen and (max-width: 1096px) {
-  //Base styles
-  .content-container {
-    width: 100%;
+@media screen and (max-width: 624px) {
+  h1 {
+    font-size: 3.4rem;
   }
+}
 
-  .flex-container:not(.feedback .flex-container) {
-    flex-direction: column;
-  }
-
-  //About page
+@media screen and (max-width: 490px) {
   .about {
-    height: fit-content;
-
-    .content-container {
-      margin: 0px;
-    }
-
     .about-image-container {
-      width: 337px;
-      margin: 0 auto;
-
-      img {
-        height: 290px;
-      }
-    }
-  }
-
-  //Spotlight page
-  .spotlight {
-    .flex-container {
-      flex-direction: column;
-    }
-
-    .content-container {
+      height: 320px;
       width: 100%;
-    }
-
-    .image-label-container span {
-      width: 100%;
-      bottom: -1px;
-      padding: 16px;
-    }
-  }
-
-  //Feedback page
-  .feedback {
-    .name-container {
-      width: 100%;
-      font-size: 1.4rem;
-    }
-
-    img:nth-of-type(2) {
-      align-self: flex-end;
-      margin-left: -100px;
-      position: relative;
-      top: 64px;
-    }
-  }
-
-  //Contact page {
-  form {
-    width: 100%;
-
-    .flex-container,
-    .text-area-container {
-      height: 100%;
-    }
-
-    .btn {
-      width: 100%;
-      text-align: center;
+      flex: unset;
+      margin-bottom: 80px;
     }
   }
 }
