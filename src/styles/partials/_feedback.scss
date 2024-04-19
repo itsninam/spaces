@@ -3,9 +3,10 @@
     border-left: 3px solid $accent-colour;
     padding-left: 40px;
     padding-top: 24px;
+    margin-bottom: 64px;
   }
 
-  img {
+  .profile-img {
     height: 100px;
     width: 100px;
     border-radius: 100%;
@@ -18,7 +19,7 @@
   }
 
   .name-container {
-    width: 250px;
+    flex-shrink: 0;
   }
 
   p {

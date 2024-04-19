@@ -75,3 +75,31 @@ textarea {
   font-size: 3.2rem;
   color: $high-emphasis-colour;
 }
+
+.image-banner {
+  position: relative;
+  height: 400px;
+
+  &.header::after {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    display: block;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../../assets/badge.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+
+    filter: brightness(125%);
+  }
+}

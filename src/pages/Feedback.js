@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Paragraph from "../components/Paragraph";
 import ContentContainer from "../components/ContentContainer";
 import FlexContainer from "../components/FlexContainer";
+import ImageBanner from "../components/ImageBanner";
 import arrow from "../assets/arrow.svg";
 
 function Feedback() {
@@ -14,6 +15,7 @@ function Feedback() {
           <Paragraph text="Spaces were an incredible team of passionate creatives, who truly transformed our space into a beautiful sanctuary." />
           <FlexContainer>
             <img
+              className="profile-img"
               src={require("../assets/image10.jpg")}
               alt="customer smiling"
             />
@@ -25,6 +27,11 @@ function Feedback() {
           </FlexContainer>
         </div>
       </ContentContainer>
+      <ImageBanner
+        className="feedback"
+        src={require("../assets/image9.jpg")}
+        alt="Lounge area with modern chairs and couch"
+      />
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import ImageBanner from "../components/ImageBanner";
 
 function LandingPage() {
   return (
@@ -6,9 +7,11 @@ function LandingPage() {
       <h1>
         <span>Spaces is an</span> architecture studio based in Toronto, Canada
       </h1>
-      <div className="header-image-container">
-        <img src={require("../assets/header.jpg")} alt="" />
-      </div>
+      <ImageBanner
+        className="header"
+        src={require("../assets/header.jpg")}
+        alt="Living room with modern furniture and sunlight peeking through tall windows"
+      />
     </header>
   );
 }

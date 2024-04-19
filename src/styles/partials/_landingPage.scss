@@ -8,31 +8,31 @@ header {
     line-height: 50px;
   }
 
-  .header-image-container {
-    position: relative;
-    height: 400px;
+  // .header-image-container {
+  //   position: relative;
+  //   height: 400px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      height: 100px;
-      width: 100px;
-      display: block;
-      top: -50px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: url("../../assets/badge.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     height: 100px;
+  //     width: 100px;
+  //     display: block;
+  //     top: -50px;
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //     background: url("../../assets/badge.png");
+  //     background-repeat: no-repeat;
+  //     background-size: cover;
+  //   }
 
-    img {
-      height: 100%;
-      width: 100%;
-      margin: 0 auto;
-      object-fit: cover;
+  //   img {
+  //     height: 100%;
+  //     width: 100%;
+  //     margin: 0 auto;
+  //     object-fit: cover;
 
-      filter: brightness(125%);
-    }
-  }
+  //     filter: brightness(125%);
+  //   }
+  // }
 }

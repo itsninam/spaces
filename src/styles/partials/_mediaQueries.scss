@@ -43,15 +43,14 @@
   //Feedback page
   .feedback {
     .name-container {
-      width: 100%;
       font-size: 1.4rem;
+      margin-right: auto;
     }
 
     img:nth-of-type(2) {
       align-self: flex-end;
       margin-left: -100px;
       position: relative;
-      top: 64px;
     }
   }
 
