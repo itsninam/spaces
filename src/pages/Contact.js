@@ -8,7 +8,7 @@ import TextArea from "../components/TextArea";
 import FlexContainer from "../components/FlexContainer";
 import Modal from "../components/Modal";
 import { useForm } from "../contexts/FormContext";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 function Contact() {
   const {
@@ -26,7 +26,7 @@ function Contact() {
   const sectionRef = useRef(null);
   const modalRef = useRef(null);
 
-  useEffect(() => {
+  const handleModalSize = useCallback(() => {
     const sectionHeight = sectionRef.current.clientHeight;
     const navigationHeight = navigationRef.current.clientHeight;
 
@@ -34,6 +34,14 @@ function Contact() {
       modalRef.current.style.height = `${sectionHeight + navigationHeight}px`;
     }
   }, [isVisible, navigationRef]);
+
+  useEffect(() => {
+    handleModalSize();
+  }, [isVisible, navigationRef, handleModalSize]);
+
+  window.addEventListener("resize", handleModalSize);
+
+  window.removeEventListener("resize", handleModalSize);
 
   return (
     <section ref={sectionRef} id="contact">

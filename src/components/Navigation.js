@@ -13,7 +13,10 @@ function Navigation() {
       <ul className={!isMobileMenuOpen ? "" : "mobile-menu"}>
         {menuItems.map((menuItem) => {
           return (
-            <li onClick={() => setIsMobileMenuOpen(false)}>
+            <li
+              onClick={() => setIsMobileMenuOpen(false)}
+              key={menuItem.menuItemLabel}
+            >
               {menuItem.directLink && (
                 <HashLink to={menuItem.menuItemLink}>
                   {menuItem.menuItemLabel}
@@ -27,7 +30,7 @@ function Navigation() {
         })}
       </ul>
       <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-        <span class="material-symbols-outlined">
+        <span className="material-symbols-outlined">
           {isMobileMenuOpen ? "close" : "menu"}
         </span>
       </button>

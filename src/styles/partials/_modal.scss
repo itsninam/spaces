@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 
   h2,
   p {
@@ -26,7 +27,8 @@
   .modal-content {
     text-align: center;
     height: fit-content;
-    width: 540px;
+    max-width: 540px;
+    width: 90%;
     background-color: #fff;
     padding: 32px;
   }

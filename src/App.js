@@ -12,6 +12,7 @@ import Spotlight from "./pages/Spotlight";
 import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
 import Feedback from "./pages/Feedback";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           }
         />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Wrapper>
   );
