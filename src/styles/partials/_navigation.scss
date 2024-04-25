@@ -1,25 +1,25 @@
 //Navigation
-nav {
-  height: 72px;
-}
 
-nav,
-ul {
+.top-nav {
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 32px;
-}
 
-ul {
-  gap: 32px;
-}
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
 
-nav a {
-  padding: 16px 0px;
-  text-transform: uppercase;
-}
+  a {
+    padding: 16px 0px;
+    text-transform: uppercase;
+  }
 
-nav button {
-  display: none;
+  button {
+    display: none;
+  }
 }

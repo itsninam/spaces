@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useForm } from "../contexts/FormContext";
-import menuItems from "../data/menuItems";
 
-function Navigation() {
+function Navigation({ children, menuItems, className }) {
   const { navigationRef, isMobileMenuOpen, setIsMobileMenuOpen } = useForm();
   return (
-    <nav ref={navigationRef}>
-      <a href="/">Spaces</a>
+    <nav ref={navigationRef} className={className}>
+      {children}
+      {console.log(className)}
 
       <ul className={!isMobileMenuOpen ? "" : "mobile-menu"}>
         {menuItems.map((menuItem) => {
@@ -29,11 +29,13 @@ function Navigation() {
           );
         })}
       </ul>
-      <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-        <span className="material-symbols-outlined">
-          {isMobileMenuOpen ? "close" : "menu"}
-        </span>
-      </button>
+      {className === "top-nav" && (
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <span className="material-symbols-outlined">
+            {isMobileMenuOpen ? "close" : "menu"}
+          </span>
+        </button>
+      )}
     </nav>
   );
 }

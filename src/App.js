@@ -13,11 +13,16 @@ import Contact from "./pages/Contact";
 import Navigation from "./components/Navigation";
 import Feedback from "./pages/Feedback";
 import NotFound from "./pages/NotFound";
+import Spaces from "./components/Spaces";
+import menuItems from "./data/menuItems";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
     <Wrapper>
-      <Navigation />
+      <Navigation menuItems={menuItems} className="top-nav">
+        <Spaces />
+      </Navigation>
       <Routes>
         <Route
           path="/"
@@ -29,6 +34,7 @@ function App() {
                 <Spotlight />
                 <Feedback />
               </Main>
+              <Footer />
             </>
           }
         />
