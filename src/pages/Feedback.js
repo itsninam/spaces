@@ -21,7 +21,9 @@ function Feedback() {
             />
             <div className="name-container">
               <h3>Jaime Jorge</h3>
-              <p>Founder, Rentea</p>
+              <p>
+                Founder, <span>Rentea</span>
+              </p>
             </div>
             <img src={arrow} alt="right arrow" />
           </FlexContainer>

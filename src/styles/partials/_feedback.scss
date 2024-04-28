@@ -20,6 +20,10 @@
 
   .name-container {
     flex-shrink: 0;
+
+    span {
+      text-transform: uppercase;
+    }
   }
 
   p {

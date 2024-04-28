@@ -1,0 +1,24 @@
+footer {
+  padding: 32px 0px;
+
+  h4 {
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  .flex-container {
+    gap: 76px;
+  }
+
+  .contact-info {
+    flex: 1;
+  }
+
+  .bottom-nav p {
+    font-weight: $font-weight-semi-bold;
+  }
+}

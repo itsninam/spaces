@@ -29,7 +29,6 @@ function Contact() {
   const handleModalSize = useCallback(() => {
     const sectionHeight = sectionRef.current.clientHeight;
     const navigationHeight = navigationRef.current.clientHeight;
-
     if (isVisible) {
       modalRef.current.style.height = `${sectionHeight + navigationHeight}px`;
     }
