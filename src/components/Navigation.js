@@ -5,10 +5,12 @@ import { useForm } from "../contexts/FormContext";
 
 function Navigation({ children, menuItems, className }) {
   const { navigationRef, isMobileMenuOpen, setIsMobileMenuOpen } = useForm();
+
+  const itemRef = className === "top-nav" ? { ref: navigationRef } : {};
+
   return (
-    <nav ref={navigationRef} className={className}>
+    <nav {...itemRef} className={className}>
       {children}
-      {console.log(className)}
 
       <ul className={!isMobileMenuOpen ? "" : "mobile-menu"}>
         {menuItems.map((menuItem) => {
